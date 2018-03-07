@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="03d64b5c-f317-4ab1-a42c-2e60fcedc315" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://folkend-001-site3.itempurl.com/" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="Service.xsd" MetadataType="Schema" ID="b8458209-86b6-44c0-8334-682bcec1f49c" SourceId="1" SourceUrl="http://folkend-001-site3.itempurl.com/Service.svc?xsd=xsd1" />
+    <MetadataFile FileName="Service1.xsd" MetadataType="Schema" ID="e0e3d00d-fb53-4571-8951-c882615390dc" SourceId="1" SourceUrl="http://folkend-001-site3.itempurl.com/Service.svc?xsd=xsd0" />
+    <MetadataFile FileName="Service2.xsd" MetadataType="Schema" ID="25261bfd-525e-4040-a22f-e66eff8c8d4d" SourceId="1" SourceUrl="http://folkend-001-site3.itempurl.com/Service.svc?xsd=xsd3" />
+    <MetadataFile FileName="Service3.xsd" MetadataType="Schema" ID="3e43cea5-d564-44f4-9e1b-01351145be9a" SourceId="1" SourceUrl="http://folkend-001-site3.itempurl.com/Service.svc?xsd=xsd2" />
+    <MetadataFile FileName="ZeusService.wsdl" MetadataType="Wsdl" ID="83d0f5ae-d22c-463e-a0f7-41cf14d2dfb7" SourceId="1" SourceUrl="http://folkend-001-site3.itempurl.com/Service.svc?wsdl" />
+    <MetadataFile FileName="Service.disco" MetadataType="Disco" ID="4293058d-d653-4cd0-af19-f888310af973" SourceId="1" SourceUrl="http://folkend-001-site3.itempurl.com/Service.svc?disco" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

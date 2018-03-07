@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://tempuri.org/" elementFormDefault="qualified" targetNamespace="http://tempuri.org/" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://folkend-001-site3.itempurl.com/Service.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/ZeusServices" />
+  <xs:import schemaLocation="http://folkend-001-site3.itempurl.com/Service.svc?xsd=xsd3" namespace="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+  <xs:element name="ProbarConexionWs">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ProbarConexionWsResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="ProbarConexionWsResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="VerificarLogin">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="login" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="password" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="VerificarLoginResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q1="http://schemas.datacontract.org/2004/07/ZeusServices" minOccurs="0" name="VerificarLoginResult" nillable="true" type="q1:EmpleadoDTO" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="AgregarEmpleado">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="login" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="password" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="fechaPassword" type="xs:long" />
+        <xs:element minOccurs="0" name="fechaUltimoIngreso" type="xs:long" />
+        <xs:element minOccurs="0" name="fechaCreacionUsuario" type="xs:long" />
+        <xs:element minOccurs="0" name="nombres" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="apellidos" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="direccion" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="salario" type="xs:decimal" />
+        <xs:element minOccurs="0" name="telefonoMovil" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="telefonoFijo" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="email" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="departamentoID" type="xs:short" />
+        <xs:element minOccurs="0" name="foto" nillable="true" type="xs:base64Binary" />
+        <xs:element minOccurs="0" name="identificacion" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="cargoID" type="xs:short" />
+        <xs:element minOccurs="0" name="grupoEncargadoID" type="xs:short" />
+        <xs:element minOccurs="0" name="fechaNacimiento" type="xs:long" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="AgregarEmpleadoResponse">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ListaEmpleadosAsignados">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="ID_Grupo_Encargado" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ListaEmpleadosAsignadosResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q2="http://schemas.datacontract.org/2004/07/ZeusServices" minOccurs="0" name="ListaEmpleadosAsignadosResult" nillable="true" type="q2:ArrayOfEmpleadoDTO" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ListaGrupoDeTrabajoConSupervisor">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="ID_Grupo_Perteneciente" type="xs:int" />
+        <xs:element minOccurs="0" name="loginExcluir" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ListaGrupoDeTrabajoConSupervisorResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q3="http://schemas.datacontract.org/2004/07/ZeusServices" minOccurs="0" name="ListaGrupoDeTrabajoConSupervisorResult" nillable="true" type="q3:ArrayOfEmpleadoDTO" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SubirCoordenadasEmpleados">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="ID" type="xs:int" />
+        <xs:element minOccurs="0" name="Latitud" type="xs:decimal" />
+        <xs:element minOccurs="0" name="Longitud" type="xs:decimal" />
+        <xs:element minOccurs="0" name="Velocidad" nillable="true" type="xs:decimal" />
+        <xs:element minOccurs="0" name="Precision" type="xs:decimal" />
+        <xs:element minOccurs="0" name="Bearing" type="xs:decimal" />
+        <xs:element minOccurs="0" name="tiempo" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SubirCoordenadasEmpleadosResponse">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="BajarCoordenadasEmpleados">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="fechaInicial" type="xs:long" />
+        <xs:element minOccurs="0" name="fechaFinal" type="xs:long" />
+        <xs:element xmlns:q4="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="persona" nillable="true" type="q4:ArrayOfint" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="BajarCoordenadasEmpleadosResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q5="http://schemas.datacontract.org/2004/07/ZeusServices" minOccurs="0" name="BajarCoordenadasEmpleadosResult" nillable="true" type="q5:ArrayOfUbicacionDTO" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ListarMensajes">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="emisor" type="xs:int" />
+        <xs:element minOccurs="0" name="receptor" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ListarMensajesResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q6="http://schemas.datacontract.org/2004/07/ZeusServices" minOccurs="0" name="ListarMensajesResult" nillable="true" type="q6:ArrayOfHistorialChat" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="guardarMensajes">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="emisor" type="xs:int" />
+        <xs:element minOccurs="0" name="receptor" type="xs:int" />
+        <xs:element minOccurs="0" name="mensaje" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="fecha" type="xs:dateTime" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="guardarMensajesResponse">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

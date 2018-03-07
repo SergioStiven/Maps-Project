@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/ZeusServices" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/ZeusServices" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:complexType name="EmpleadoDTO">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="ID_Login" type="xs:int" />
+      <xs:element minOccurs="0" name="depar_nombre" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="grp_nombre_cargo" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="grp_nombre_encargado" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="usr_apellidos" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="usr_cargo_ID" type="xs:short" />
+      <xs:element minOccurs="0" name="usr_departamento_ID" type="xs:short" />
+      <xs:element minOccurs="0" name="usr_direccion" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="usr_email" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="usr_fecha_creacion_usuario" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="usr_fecha_ultimo_ingreso" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="usr_fechanacimiento" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="usr_fotografia" nillable="true" type="xs:base64Binary" />
+      <xs:element minOccurs="0" name="usr_grupo_encargado_ID" type="xs:short" />
+      <xs:element minOccurs="0" name="usr_identificacion" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="usr_login" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="usr_nombres" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="usr_salario" nillable="true" type="xs:decimal" />
+      <xs:element minOccurs="0" name="usr_telefonoFijo" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="usr_telefonoMovil" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="EmpleadoDTO" nillable="true" type="tns:EmpleadoDTO" />
+  <xs:complexType name="ArrayOfEmpleadoDTO">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="EmpleadoDTO" nillable="true" type="tns:EmpleadoDTO" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfEmpleadoDTO" nillable="true" type="tns:ArrayOfEmpleadoDTO" />
+  <xs:complexType name="ArrayOfUbicacionDTO">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="UbicacionDTO" nillable="true" type="tns:UbicacionDTO" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfUbicacionDTO" nillable="true" type="tns:ArrayOfUbicacionDTO" />
+  <xs:complexType name="UbicacionDTO">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Bearing" type="xs:decimal" />
+      <xs:element minOccurs="0" name="Direccion" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ID_Coordenada" type="xs:int" />
+      <xs:element minOccurs="0" name="ID_Usuario_Ubicacion" type="xs:int" />
+      <xs:element minOccurs="0" name="Latitud" type="xs:decimal" />
+      <xs:element minOccurs="0" name="Longitud" type="xs:decimal" />
+      <xs:element minOccurs="0" name="Nombre_Usuario" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Precision" type="xs:decimal" />
+      <xs:element minOccurs="0" name="Tiempo" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Velocidad" nillable="true" type="xs:decimal" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="UbicacionDTO" nillable="true" type="tns:UbicacionDTO" />
+  <xs:complexType name="ArrayOfHistorialChat">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="HistorialChat" nillable="true" type="tns:HistorialChat" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfHistorialChat" nillable="true" type="tns:ArrayOfHistorialChat" />
+  <xs:complexType name="HistorialChat">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Emisor" type="xs:int" />
+      <xs:element minOccurs="0" name="Fecha" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="ID_Chat" type="xs:long" />
+      <xs:element minOccurs="0" name="Mensaje" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Receptor" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="HistorialChat" nillable="true" type="tns:HistorialChat" />
+</xs:schema>

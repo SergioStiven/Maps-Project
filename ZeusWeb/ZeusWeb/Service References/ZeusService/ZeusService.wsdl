@@ -1,0 +1,192 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://tempuri.org/" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="ZeusService" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://tempuri.org/Imports">
+      <xsd:import schemaLocation="http://folkend-001-site3.itempurl.com/Service.svc?xsd=xsd0" namespace="http://tempuri.org/" />
+      <xsd:import schemaLocation="http://folkend-001-site3.itempurl.com/Service.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import schemaLocation="http://folkend-001-site3.itempurl.com/Service.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/ZeusServices" />
+      <xsd:import schemaLocation="http://folkend-001-site3.itempurl.com/Service.svc?xsd=xsd3" namespace="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="IServiceZeus_ProbarConexionWs_InputMessage">
+    <wsdl:part name="parameters" element="tns:ProbarConexionWs" />
+  </wsdl:message>
+  <wsdl:message name="IServiceZeus_ProbarConexionWs_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ProbarConexionWsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServiceZeus_VerificarLogin_InputMessage">
+    <wsdl:part name="parameters" element="tns:VerificarLogin" />
+  </wsdl:message>
+  <wsdl:message name="IServiceZeus_VerificarLogin_OutputMessage">
+    <wsdl:part name="parameters" element="tns:VerificarLoginResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServiceZeus_AgregarEmpleado_InputMessage">
+    <wsdl:part name="parameters" element="tns:AgregarEmpleado" />
+  </wsdl:message>
+  <wsdl:message name="IServiceZeus_AgregarEmpleado_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AgregarEmpleadoResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServiceZeus_ListaEmpleadosAsignados_InputMessage">
+    <wsdl:part name="parameters" element="tns:ListaEmpleadosAsignados" />
+  </wsdl:message>
+  <wsdl:message name="IServiceZeus_ListaEmpleadosAsignados_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ListaEmpleadosAsignadosResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServiceZeus_ListaGrupoDeTrabajoConSupervisor_InputMessage">
+    <wsdl:part name="parameters" element="tns:ListaGrupoDeTrabajoConSupervisor" />
+  </wsdl:message>
+  <wsdl:message name="IServiceZeus_ListaGrupoDeTrabajoConSupervisor_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ListaGrupoDeTrabajoConSupervisorResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServiceZeus_SubirCoordenadasEmpleados_InputMessage">
+    <wsdl:part name="parameters" element="tns:SubirCoordenadasEmpleados" />
+  </wsdl:message>
+  <wsdl:message name="IServiceZeus_SubirCoordenadasEmpleados_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SubirCoordenadasEmpleadosResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServiceZeus_BajarCoordenadasEmpleados_InputMessage">
+    <wsdl:part name="parameters" element="tns:BajarCoordenadasEmpleados" />
+  </wsdl:message>
+  <wsdl:message name="IServiceZeus_BajarCoordenadasEmpleados_OutputMessage">
+    <wsdl:part name="parameters" element="tns:BajarCoordenadasEmpleadosResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServiceZeus_ListarMensajes_InputMessage">
+    <wsdl:part name="parameters" element="tns:ListarMensajes" />
+  </wsdl:message>
+  <wsdl:message name="IServiceZeus_ListarMensajes_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ListarMensajesResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServiceZeus_guardarMensajes_InputMessage">
+    <wsdl:part name="parameters" element="tns:guardarMensajes" />
+  </wsdl:message>
+  <wsdl:message name="IServiceZeus_guardarMensajes_OutputMessage">
+    <wsdl:part name="parameters" element="tns:guardarMensajesResponse" />
+  </wsdl:message>
+  <wsdl:portType name="IServiceZeus">
+    <wsdl:operation name="ProbarConexionWs">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServiceZeus/ProbarConexionWs" message="tns:IServiceZeus_ProbarConexionWs_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServiceZeus/ProbarConexionWsResponse" message="tns:IServiceZeus_ProbarConexionWs_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="VerificarLogin">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServiceZeus/VerificarLogin" message="tns:IServiceZeus_VerificarLogin_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServiceZeus/VerificarLoginResponse" message="tns:IServiceZeus_VerificarLogin_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="AgregarEmpleado">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServiceZeus/AgregarEmpleado" message="tns:IServiceZeus_AgregarEmpleado_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServiceZeus/AgregarEmpleadoResponse" message="tns:IServiceZeus_AgregarEmpleado_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ListaEmpleadosAsignados">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServiceZeus/ListaEmpleadosAsignados" message="tns:IServiceZeus_ListaEmpleadosAsignados_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServiceZeus/ListaEmpleadosAsignadosResponse" message="tns:IServiceZeus_ListaEmpleadosAsignados_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ListaGrupoDeTrabajoConSupervisor">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServiceZeus/ListaGrupoDeTrabajoConSupervisor" message="tns:IServiceZeus_ListaGrupoDeTrabajoConSupervisor_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServiceZeus/ListaGrupoDeTrabajoConSupervisorResponse" message="tns:IServiceZeus_ListaGrupoDeTrabajoConSupervisor_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SubirCoordenadasEmpleados">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServiceZeus/SubirCoordenadasEmpleados" message="tns:IServiceZeus_SubirCoordenadasEmpleados_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServiceZeus/SubirCoordenadasEmpleadosResponse" message="tns:IServiceZeus_SubirCoordenadasEmpleados_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="BajarCoordenadasEmpleados">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServiceZeus/BajarCoordenadasEmpleados" message="tns:IServiceZeus_BajarCoordenadasEmpleados_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServiceZeus/BajarCoordenadasEmpleadosResponse" message="tns:IServiceZeus_BajarCoordenadasEmpleados_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ListarMensajes">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServiceZeus/ListarMensajes" message="tns:IServiceZeus_ListarMensajes_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServiceZeus/ListarMensajesResponse" message="tns:IServiceZeus_ListarMensajes_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="guardarMensajes">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServiceZeus/guardarMensajes" message="tns:IServiceZeus_guardarMensajes_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServiceZeus/guardarMensajesResponse" message="tns:IServiceZeus_guardarMensajes_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="BasicHttpBinding_IServiceZeus" type="tns:IServiceZeus">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="ProbarConexionWs">
+      <soap:operation soapAction="http://tempuri.org/IServiceZeus/ProbarConexionWs" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="VerificarLogin">
+      <soap:operation soapAction="http://tempuri.org/IServiceZeus/VerificarLogin" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AgregarEmpleado">
+      <soap:operation soapAction="http://tempuri.org/IServiceZeus/AgregarEmpleado" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ListaEmpleadosAsignados">
+      <soap:operation soapAction="http://tempuri.org/IServiceZeus/ListaEmpleadosAsignados" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ListaGrupoDeTrabajoConSupervisor">
+      <soap:operation soapAction="http://tempuri.org/IServiceZeus/ListaGrupoDeTrabajoConSupervisor" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SubirCoordenadasEmpleados">
+      <soap:operation soapAction="http://tempuri.org/IServiceZeus/SubirCoordenadasEmpleados" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="BajarCoordenadasEmpleados">
+      <soap:operation soapAction="http://tempuri.org/IServiceZeus/BajarCoordenadasEmpleados" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ListarMensajes">
+      <soap:operation soapAction="http://tempuri.org/IServiceZeus/ListarMensajes" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="guardarMensajes">
+      <soap:operation soapAction="http://tempuri.org/IServiceZeus/guardarMensajes" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="ZeusService">
+    <wsdl:port name="BasicHttpBinding_IServiceZeus" binding="tns:BasicHttpBinding_IServiceZeus">
+      <soap:address location="http://folkend-001-site3.itempurl.com/Service.svc" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>
